@@ -7,7 +7,7 @@ public class Player : MonoBehaviour {
 	//static public bool Running;
 	//public AudioClip RunSound;
 	public Animator Anim;
-	public float Speed;
+	public static float Speed;
 	private Rigidbody2D rb;
     private float DeathTime, CurrentDeathTime;
     private bool faceRight, idle;
@@ -34,7 +34,7 @@ public class Player : MonoBehaviour {
 	public void FixedUpdate()
 	{
 		move = new Vector2 (Input.GetAxis ("Horizontal") * Speed, Input.GetAxis ("Vertical") * Speed);
-		rb.velocity = move;
+		rb.velocity = move*Speed;
 
 		Anim.SetFloat("Move", Mathf.Abs(move.x));
 		Anim.SetFloat ("MoveY", move.y);
@@ -52,7 +52,6 @@ public class Player : MonoBehaviour {
 		}
         if (idle&&!controlidleFlip)
         {
-         //   Flip();
             controlidleFlip = true;
         }
         

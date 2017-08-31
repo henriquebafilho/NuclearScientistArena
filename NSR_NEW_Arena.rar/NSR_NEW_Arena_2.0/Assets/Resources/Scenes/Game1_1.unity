@@ -113,7 +113,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 124762145}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -7249}
+  m_LocalPosition: {x: 0, y: 0, z: -7134}
   m_LocalScale: {x: 0.9998906, y: 0.9998906, z: 0.9998906}
   m_Children:
   - {fileID: 712361959}
@@ -238,7 +238,18 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 55d9004d59472784ab14b42159829eb1, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 114978339842649920, guid: 74038626f554bc74fabed7d387378e40,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1431092756}
+    - target: {fileID: 114978339842649920, guid: 74038626f554bc74fabed7d387378e40,
+        type: 2}
+      propertyPath: monster
+      value: 
+      objectReference: {fileID: 715720054}
+    m_RemovedComponents:
+    - {fileID: 114978339842649920, guid: 74038626f554bc74fabed7d387378e40, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 74038626f554bc74fabed7d387378e40, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &305651410 stripped
@@ -346,6 +357,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particule: {fileID: 1765635714089388, guid: 74038626f554bc74fabed7d387378e40, type: 2}
+  scoreText1: {fileID: 712361960}
+  scoreText2: {fileID: 559364382}
 --- !u!1 &406591844
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +458,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Pontos:'
+  m_Text: 'Pontos: '
 --- !u!222 &559364383
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -598,7 +611,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Pontos:'
+  m_Text: 'Pontos: '
 --- !u!222 &712361961
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -667,9 +680,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b60df11b659d74d4baecbd0f37fdb4d8, type: 3}
+  m_SortingLayerID: -1920945065
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 404509a12de07d5468636d1df4bacc6a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -697,7 +710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a2e08bf90561044bb738639db688063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 7
   canshot: 0
 --- !u!50 &715720059
 Rigidbody2D:
@@ -1290,6 +1302,11 @@ BoxCollider2D:
   m_Offset: {x: -7.637738, y: 0.55933285}
   serializedVersion: 2
   m_Size: {x: 0.6913948, y: 10.527887}
+--- !u!1 &1431092756 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1558039821109588, guid: 556a3284784732d49bfb614f6cf6788e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636734369}
 --- !u!1 &1472410257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,6 +1407,11 @@ Prefab:
         type: 2}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114275757517664466, guid: 556a3284784732d49bfb614f6cf6788e,
+        type: 2}
+      propertyPath: Speed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 556a3284784732d49bfb614f6cf6788e, type: 2}
@@ -1599,6 +1621,25 @@ Transform:
   m_Father: {fileID: 1069114669}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1797495083 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1765635714089388, guid: 74038626f554bc74fabed7d387378e40,
+    type: 2}
+  m_PrefabInternal: {fileID: 267266882}
+--- !u!114 &1797495084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1797495083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e75208086da0fd42abe3b567baa1644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1431092756}
+  monster: {fileID: 715720054}
+  canshot: 0
 --- !u!1 &1801278204
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Monster : MonoBehaviour {
-	public float Speed;
+	public static float Speed;
 	private Rigidbody2D rb;
 	Vector2 move;
 	private bool faceRight;
@@ -12,16 +12,18 @@ public class Monster : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		faceRight = false;
+        canshot = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
-	void FixedUpdate()
+	public void FixedUpdate()
 	{
-		move = new Vector2 (Input.GetAxis ("Horizontal2"), Input.GetAxis ("Vertical2"));
-		rb.velocity = move*Speed;
+        move = new Vector2(Input.GetAxis("Horizontal2") * Speed, Input.GetAxis("Vertical2") * Speed);
+        rb.velocity = move * Speed;
+
 		if (move.x > 0 && !faceRight) Flip();
 		else if (move.x < 0 && faceRight) Flip();
 	}
