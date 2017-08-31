@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f38145f447b48a84185d1af483fa6b4d
+timeCreated: 1503581287
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Pixel Bug
+  fontNames:
+  - Pixel Bug
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
