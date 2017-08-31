@@ -1187,7 +1187,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 849635385}
-        m_MethodName: OnClickPlay
+        m_MethodName: OnClickHistory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -7,7 +7,7 @@ public class Player : MonoBehaviour {
 	//static public bool Running;
 	//public AudioClip RunSound;
 	public Animator Anim;
-	public static float Speed;
+	public  float Speed;
 	private Rigidbody2D rb;
     private float DeathTime, CurrentDeathTime;
     private bool faceRight, idle;
@@ -33,7 +33,7 @@ public class Player : MonoBehaviour {
 
 	public void FixedUpdate()
 	{
-		move = new Vector2 (Input.GetAxis ("Horizontal") * Speed, Input.GetAxis ("Vertical") * Speed);
+		move = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
 		rb.velocity = move*Speed;
 
 		Anim.SetFloat("Move", Mathf.Abs(move.x));

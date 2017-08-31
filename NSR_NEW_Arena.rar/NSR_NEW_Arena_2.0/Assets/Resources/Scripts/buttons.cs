@@ -14,6 +14,9 @@ public class buttons : MonoBehaviour {
 	public void OnClickMenu(){
 		SceneManager.LoadScene ("Menu");
 	}
+    public void OnClickHistory() {
+        SceneManager.LoadScene("History");
+    }
 	public void OnClickExit(){
 		Application.Quit ();
 	}

@@ -18,13 +18,14 @@ public class GameMananger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        UpdateScore();
+        Spawns();
 	}
-	public void spaw()
+	public void spawn()
 	{
-		StartCoroutine (Spaws ());
+		StartCoroutine (Spawns ());
 	}
-	public IEnumerator  Spaws()
+	public IEnumerator  Spawns()
 	{
 		yield return new WaitForSeconds (4);
 		Instantiate (particule, drains [Random.Range (0, drains.Length)].transform.position, Quaternion.identity);

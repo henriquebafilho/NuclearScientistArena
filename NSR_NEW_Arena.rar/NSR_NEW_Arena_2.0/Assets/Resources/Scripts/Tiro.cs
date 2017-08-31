@@ -46,20 +46,20 @@ public  class Tiro : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.Space))
             {
-                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, 5 * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, player.GetComponent<Player>().Speed * Time.deltaTime);
                 //detecta colisão da flor com o cientista
                 if (transform.position == player.transform.position)
-                { GameMananger.touchable = 2; Debug.Log("encostou no player"); }
+                { GameMananger.touchable = 1; Debug.Log("encostou no player"); }
             }
         }
         if(monster.GetComponent<Monster>().canshot)
         {
             if (Input.GetKey(KeyCode.P))
             {
-                transform.position = Vector3.MoveTowards(transform.position, monster.transform.position, 5 * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, monster.transform.position, monster.GetComponent<Monster>().Speed * Time.deltaTime);
                 //detecta colisão com da flor com o monstro
                 if(transform.position == monster.transform.position)
-                { GameMananger.touchable = 1; Debug.Log("encostou no monstro"); }
+                { GameMananger.touchable = 2; Debug.Log("encostou no monstro"); }
             }
         }
         else { canshot = false; }

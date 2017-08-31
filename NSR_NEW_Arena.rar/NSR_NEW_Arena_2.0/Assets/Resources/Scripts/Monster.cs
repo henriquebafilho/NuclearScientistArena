@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Monster : MonoBehaviour {
-	public static float Speed;
+	public  float Speed;
 	private Rigidbody2D rb;
 	Vector2 move;
 	private bool faceRight;
@@ -21,7 +21,7 @@ public class Monster : MonoBehaviour {
 	}
 	public void FixedUpdate()
 	{
-        move = new Vector2(Input.GetAxis("Horizontal2") * Speed, Input.GetAxis("Vertical2") * Speed);
+        move = new Vector2(Input.GetAxis("Horizontal2"), Input.GetAxis("Vertical2"));
         rb.velocity = move * Speed;
 
 		if (move.x > 0 && !faceRight) Flip();
