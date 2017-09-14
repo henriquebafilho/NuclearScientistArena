@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/Resources/Scenes/Tips.unity
   - enabled: 1
     path: Assets/Resources/Scenes/victory.unity
+  - enabled: 1
+    path: Assets/Resources/Scenes/MonsterVictory.unity
