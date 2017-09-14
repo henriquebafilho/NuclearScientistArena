@@ -68,20 +68,7 @@ public class Player : MonoBehaviour {
         
     }
     //detectando área de colisão com o tiro
-    void OnTriggerEnter2D(Collider2D coll)
-    {
-            if (coll.gameObject.tag == "colisor")
-            {
-                canshot = true;
-            }
-    }
-    void OnTriggerExit2D(Collider2D coll)
-    {
-        if(coll.gameObject.tag == "colisor")
-        {
-            canshot = false;
-        }
-    }
+    
     //---------------------------------
     void OnDisable()
 	{

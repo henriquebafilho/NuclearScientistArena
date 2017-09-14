@@ -42,6 +42,6 @@ public class GameMananger : MonoBehaviour {
     {
         scoreText1.text = "Pontos: " + score1;
         scoreText2.text = "Pontos: " + score2;
-        if (score1 == 50 || score2 == 50) { SceneManager.LoadScene("victory"); }
+        if (score1 == 100 || score2 == 100) { SceneManager.LoadScene("victory"); }
     }
 }

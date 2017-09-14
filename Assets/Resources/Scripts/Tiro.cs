@@ -4,14 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public  class Tiro : MonoBehaviour {
+	public static Vector3 offset;
     public GameObject player;
     public GameObject monster;
     public static float forceFactor = 2000;
-    public bool canshot = false;
-    bool isGuardado = false;
+    public bool canshot1 = false;
+	public bool canshot2=false;
+    public bool isGuardado = false;
 	// Use this for initialization
 	void Start () {
         player = GameObject.Find("PLayer");
+		offset = new Vector3 (0.8f, 0.3f, 0f);
+		monster = GameObject.Find ("Monstro");
     }
     //se o jogador encostar no tiro, nada acontece, mas se ele apertar espaço o tiro vai até a ele
 
@@ -27,16 +31,10 @@ public  class Tiro : MonoBehaviour {
                 GameMananger.touchable = 2;
             }
             //adiciona pontos ao encostar na reserva com o cientista
-            if(coll.gameObject.tag == "reserva" && GameMananger.touchable == 1)
+            if(coll.gameObject.tag == "reserva" )
             {  
                 isGuardado = true;
-                GameMananger.score1 = 50;
-                Destroy(gameObject);
-            }
-            if(coll.gameObject.tag == "reserva" && GameMananger.touchable == 2)
-            {
-                isGuardado = false;
-                GameMananger.score2 = 50;
+                GameMananger.score1 += 50;
                 Destroy(gameObject);
             }
      }
@@ -46,27 +44,33 @@ public  class Tiro : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-        if (player.GetComponent<Player>().canshot)
+		if (canshot1)
         {
             if (Input.GetKey(KeyCode.Space))
             {
-                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, player.GetComponent<Player>().Speed * Time.deltaTime);
+             //   transform.position = Vector3.MoveTowards(transform.position, player.transform.position, player.GetComponent<Player>().Speed * Time.deltaTime);
+				transform.position = Vector3.Lerp(transform.position, player.transform.position - offset, 0.5f);
                 //detecta colisão da flor com o cientista
                 if (transform.position == player.transform.position)
                 { GameMananger.touchable = 1; }
             }
+			if (Input.GetAxis ("Horizontal") > 0) {
+				offset.x = -0.8f;
+			}
+			if (Input.GetAxis ("Horizontal") < 0) {
+				offset.x = 0.8f;
+			}
         }
-        if(monster.GetComponent<Monster>().canshot)
-        {
+		if(canshot2)
+        {	
             if (Input.GetKey(KeyCode.P))
             {
                 transform.position = Vector3.MoveTowards(transform.position, monster.transform.position, monster.GetComponent<Monster>().Speed * Time.deltaTime);
                 //detecta colisão com da flor com o monstro
                 if(transform.position == monster.transform.position)
-                { GameMananger.touchable = 2; GameMananger.score2 = 50; Destroy(gameObject); }
+                { GameMananger.touchable = 2; GameMananger.score2 += 50; Destroy(gameObject); }
             }
         }
-        else { canshot = false; }
     }
     
 }

@@ -7,6 +7,10 @@ TagManager:
   - Flor
   - Tiro
   - colisor
+  - reserva
+  - Monstro
+  - drain
+  - wall
   layers:
   - Default
   - TransparentFX
@@ -17,8 +21,8 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
+  - Colisor
+  - Reserva
   - 
   - 
   - 
