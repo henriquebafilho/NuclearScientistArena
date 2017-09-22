@@ -46,7 +46,7 @@ public  class Tiro : MonoBehaviour {
     void Update () {
 		if (canshot1)
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.P))
             {
              //   transform.position = Vector3.MoveTowards(transform.position, player.transform.position, player.GetComponent<Player>().Speed * Time.deltaTime);
 				transform.position = Vector3.MoveTowards(transform.position, player.transform.position - offset, 0.3f);
@@ -63,7 +63,7 @@ public  class Tiro : MonoBehaviour {
         }
 		if(canshot2)
         {	
-            if (Input.GetKey(KeyCode.P))
+            if (Input.GetKey(KeyCode.Space))
             {
                 //transform.position = Vector3.MoveTowards(transform.position, monster.transform.position, monster.GetComponent<Monster>().Speed * Time.deltaTime);
                 transform.position = Vector3.MoveTowards(transform.position, monster.transform.position, 0.3f);

@@ -21,11 +21,11 @@ public class Monster : MonoBehaviour {
 	}
 	public void FixedUpdate()
 	{
-        move = new Vector2(Input.GetAxis("Horizontal2"), Input.GetAxis("Vertical2"));
+        move = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         rb.velocity = move * Speed;
 
-		if (move.x > 0 && !faceRight) Flip();
-		else if (move.x < 0 && faceRight) Flip();
+		if (move.x < 0 && !faceRight) Flip();
+		else if (move.x > 0 && faceRight) Flip();
 	}
 	private void Flip()
 	{

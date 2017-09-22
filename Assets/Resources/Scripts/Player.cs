@@ -33,8 +33,8 @@ public class Player : MonoBehaviour {
 
 	public void FixedUpdate()
 	{
-		move = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
-		rb.velocity = move*Speed;
+        move = new Vector2(Input.GetAxis("Horizontal2"), Input.GetAxis("Vertical2"));
+        rb.velocity = move*Speed;
 
 		Anim.SetFloat("Move", Mathf.Abs(move.x));
 		Anim.SetFloat ("MoveY", move.y);
