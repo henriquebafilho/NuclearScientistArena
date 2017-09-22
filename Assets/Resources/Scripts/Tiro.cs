@@ -54,10 +54,10 @@ public  class Tiro : MonoBehaviour {
                 if (transform.position == player.transform.position)
                 { GameMananger.touchable = 1; }
             }
-			if (Input.GetAxis ("Horizontal") > 0) {
+			if (Input.GetAxis ("Horizontal2") > 0) {
 				offset.x = -0.8f;
 			}
-			if (Input.GetAxis ("Horizontal") < 0) {
+			if (Input.GetAxis ("Horizontal2") < 0) {
 				offset.x = 0.8f;
 			}
         }
