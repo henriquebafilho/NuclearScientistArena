@@ -23,3 +23,7 @@ EditorBuildSettings:
     path: Assets/Resources/Scenes/MonsterVictory.unity
   - enabled: 1
     path: Assets/Resources/Scenes/ScientistVictory.unity
+  - enabled: 1
+    path: Assets/Resources/Scenes/HTPMonster.unity
+  - enabled: 1
+    path: Assets/Resources/Scenes/HTPDrFletch.unity

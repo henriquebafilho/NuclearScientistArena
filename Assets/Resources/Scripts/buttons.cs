@@ -33,6 +33,9 @@ public class buttons : MonoBehaviour {
     }
     public void OnClickTips() {
         SceneManager.LoadScene("Tips");
-
     }
+    public void onClickHTPMonster()
+    { SceneManager.LoadScene("HTPMonster"); }
+    public void onClickHTPDrFletch()
+    { SceneManager.LoadScene("HTPDrFletch"); }
 }
