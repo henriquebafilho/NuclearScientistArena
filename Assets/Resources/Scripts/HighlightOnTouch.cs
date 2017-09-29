@@ -7,16 +7,7 @@ public class HighlightOnTouch : MonoBehaviour {
     public GameObject shadow;
     Ray ray;
     RaycastHit hit;
-
-	void Start () {
-      
-	}
-	
-	void Update () {
-        
-        
-    }
-
+    
     public void LightOn()
     {
         shadow.SetActive(true);
