@@ -102,7 +102,6 @@ public class Player : MonoBehaviour {
             faceRight = !faceRight;
         }
         transform.localScale = thescale;
-        Debug.Log("IDLE");
 
     }
 }

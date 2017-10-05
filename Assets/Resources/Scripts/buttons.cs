@@ -38,4 +38,12 @@ public class buttons : MonoBehaviour {
     { SceneManager.LoadScene("HTPMonster"); }
     public void onClickHTPDrFletch()
     { SceneManager.LoadScene("HTPDrFletch"); }
+    public void increaseSize()
+    {
+        transform.localScale *= 1.2f;
+    }
+    public void decreaseSize()
+    {
+        transform.localScale /= 1.2f;
+    }
 }

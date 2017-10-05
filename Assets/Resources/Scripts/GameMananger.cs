@@ -44,6 +44,9 @@ public class GameMananger : MonoBehaviour {
         scoreText2.text = "Pontos: " + score2;
         if (score1 >= 200) { SceneManager.LoadScene("ScientistVictory"); }
         if (score2 >= 200) { SceneManager.LoadScene("MonsterVictory"); }
-
+    }
+    public void increaseSize()
+    {
+        transform.localScale += new Vector3(1f, 1f, 0);
     }
 }
