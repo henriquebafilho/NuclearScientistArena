@@ -30,7 +30,10 @@ public class GameMananger : MonoBehaviour {
 	public IEnumerator  Spawns()
 	{
 		yield return new WaitForSeconds (4);
-		Instantiate (particule, drains [Random.Range (0, drains.Length)].transform.position, Quaternion.identity);
+        if(GameObject.FindGameObjectsWithTag("Flor").Length == 0)
+        {
+            Instantiate(particule, drains[Random.Range(0, drains.Length)].transform.position, Quaternion.identity);
+        }
 	}
     public void AddScore(int newScoreValue)
     {

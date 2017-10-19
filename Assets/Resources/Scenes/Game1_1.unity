@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a2e08bf90561044bb738639db688063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4
+  Speed: 6
   canshot: 0
 --- !u!50 &715720059
 Rigidbody2D:
@@ -1644,7 +1644,7 @@ Prefab:
     - target: {fileID: 114275757517664466, guid: 556a3284784732d49bfb614f6cf6788e,
         type: 2}
       propertyPath: Speed
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 61703573818374320, guid: 556a3284784732d49bfb614f6cf6788e,
         type: 2}

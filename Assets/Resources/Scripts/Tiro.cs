@@ -65,13 +65,11 @@ public  class Tiro : MonoBehaviour {
         {	
             if (Input.GetKey(KeyCode.Space))
             {
-                //transform.position = Vector3.MoveTowards(transform.position, monster.transform.position, monster.GetComponent<Monster>().Speed * Time.deltaTime);
-                transform.position = Vector3.MoveTowards(transform.position, monster.transform.position, 0.3f);
+                transform.position = Vector3.MoveTowards(transform.position, monster.transform.position, 0.2f);
                 //detecta colisão com da flor com o monstro
                 if (transform.position == monster.transform.position)
                 { GameMananger.touchable = 2; GameMananger.score2 += 50; Destroy(gameObject); }
             }
         }
     }
-    
 }

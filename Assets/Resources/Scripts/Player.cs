@@ -23,7 +23,6 @@ public class Player : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 		//Lifes = 3;
 		//SubLifes = 3;
-		Speed = 4;
 		DeathTime = 2f;
 		faceRight = true;
 		idle = true;
