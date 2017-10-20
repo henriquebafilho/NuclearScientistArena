@@ -6,6 +6,8 @@ public class spawn : MonoBehaviour {
 
 	public GameObject ruby;
 	public GameObject[] places;
+    public int segundos = 5;
+    public bool canInstantiate = true;
 	void Start () 
 	{
 		StartCoroutine(Example());
@@ -13,8 +15,8 @@ public class spawn : MonoBehaviour {
 	IEnumerator Example()
 	{
 		while (true) {
-			yield return new WaitForSeconds (5);
-			Instantiate (ruby, places [Random.Range (0, places.Length)].transform.position, Quaternion.identity);
-		}
+                yield return new WaitForSeconds(segundos);
+                Instantiate(ruby, places[Random.Range(0, places.Length)].transform.position, Quaternion.identity);
+        }
 	}
 }

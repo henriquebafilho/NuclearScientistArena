@@ -48,8 +48,7 @@ public  class Tiro : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.P))
             {
-             //   transform.position = Vector3.MoveTowards(transform.position, player.transform.position, player.GetComponent<Player>().Speed * Time.deltaTime);
-				transform.position = Vector3.MoveTowards(transform.position, player.transform.position - offset, 0.3f);
+				transform.position = Vector3.MoveTowards(transform.position, player.transform.position - offset, 0.2f);
                 //detecta colisão da flor com o cientista
                 if (transform.position == player.transform.position)
                 { GameMananger.touchable = 1; }

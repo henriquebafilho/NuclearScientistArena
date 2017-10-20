@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class buttons : MonoBehaviour {
 
-    public GameObject sound;
-
+    public GameObject sound;    
     void Update()
     {
         DontDestroyOnLoad(sound);
