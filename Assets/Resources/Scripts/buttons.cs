@@ -8,7 +8,7 @@ public class buttons : MonoBehaviour {
     public GameObject sound;    
     void Update()
     {
-        DontDestroyOnLoad(sound);
+        
     }
 
     public void OnClickPlay(){
