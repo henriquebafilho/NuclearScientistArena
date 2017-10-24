@@ -16,9 +16,9 @@ public  class Tiro : MonoBehaviour {
         player = GameObject.Find("PLayer");
 		offset = new Vector3 (0.8f, 0.3f, 0f);
 		monster = GameObject.Find ("Monstro");
+        StartCoroutine(willBeDestroyed());
     }
     //se o jogador encostar no tiro, nada acontece, mas se ele apertar espaço o tiro vai até a ele
-
     void OnTriggerEnter2D(Collider2D coll)
     {
             if (coll.gameObject.tag == "player")
@@ -70,5 +70,10 @@ public  class Tiro : MonoBehaviour {
                 { GameMananger.touchable = 2; GameMananger.score2 += 50; Destroy(gameObject); }
             }
         }
+    }
+    IEnumerator willBeDestroyed()
+    {
+        yield return new WaitForSeconds(4);
+        Destroy(gameObject);
     }
 }

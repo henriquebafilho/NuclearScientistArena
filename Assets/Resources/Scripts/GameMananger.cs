@@ -43,10 +43,10 @@ public class GameMananger : MonoBehaviour {
     }
     void UpdateScore()
     {
-        scoreText1.text = "Pontos: " + score1;
-        scoreText2.text = "Pontos: " + score2;
-        if (score1 >= 200) { SceneManager.LoadScene("ScientistVictory"); }
-        if (score2 >= 200) { SceneManager.LoadScene("MonsterVictory"); }
+        scoreText1.text = "Score: " + score1;
+        scoreText2.text = "Score: " + score2;
+        if (score1 >= 300) { SceneManager.LoadScene("ScientistVictory"); }
+        if (score2 >= 300) { SceneManager.LoadScene("MonsterVictory"); }
     }
     public void increaseSize()
     {

@@ -6,7 +6,7 @@ public class spawn : MonoBehaviour {
 
 	public GameObject ruby;
 	public GameObject[] places;
-    public int segundos = 5;
+    public int segundos = 2;
     public bool canInstantiate = true;
 	void Start () 
 	{
