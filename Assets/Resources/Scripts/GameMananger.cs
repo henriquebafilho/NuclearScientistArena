@@ -14,7 +14,7 @@ public class GameMananger : MonoBehaviour {
         score1 = 0;
         score2 = 0;
 		drains = GameObject.FindGameObjectsWithTag ("drain");
-        
+        Time.timeScale = 1;
 	}
 	
 	// Update is called once per frame

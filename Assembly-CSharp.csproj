@@ -55,6 +55,7 @@
      <Compile Include="Assets\Resources\Scripts\Tiro.cs" />
      <Compile Include="Assets\Resources\Scripts\buttons.cs" />
      <Compile Include="Assets\Resources\Scripts\fade.cs" />
+     <Compile Include="Assets\Resources\Scripts\pauseScript.cs" />
      <Compile Include="Assets\Resources\Scripts\spawn.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
