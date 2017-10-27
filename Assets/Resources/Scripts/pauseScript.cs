@@ -6,6 +6,13 @@ public class pauseScript : MonoBehaviour {
    
     public GameObject pauseToMenu, newGame, restart;
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pausar();
+        }
+    }
     public void Pausar()
     {
         if (Time.timeScale == 1)

@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public  class Tiro : MonoBehaviour {
 	public static Vector3 offset;
-    public GameObject player;
-    public GameObject monster;
+    public GameObject player,  monster;
     public static float forceFactor = 2000;
     public bool canshot1 = false;
 	public bool canshot2=false;
@@ -26,19 +25,19 @@ public  class Tiro : MonoBehaviour {
                 player.GetComponent<Player>().canshot = false;
                 GameMananger.touchable = 1;
             }
-            if(coll.gameObject.tag == "Monstro" && Input.GetKey(KeyCode.Space))
+            if(coll.gameObject.tag == "Monstro" && 
+               Input.GetKey(KeyCode.Space))
             {
-                //GameMananger.touchable = 2;
                 GameMananger.score2 += 50;
                 Destroy(gameObject);
-            }
+        }
             //adiciona pontos ao encostar na reserva com o cientista
             if(coll.gameObject.tag == "reserva" )
             {  
                 isGuardado = true;
                 GameMananger.score1 += 50;
                 Destroy(gameObject);
-            }
+        }
      }
     void OnTriggerExit2D(Collider2D coll)
     {
@@ -48,7 +47,7 @@ public  class Tiro : MonoBehaviour {
     void Update () {
 		if (canshot1)
         {
-            if (Input.GetKey(KeyCode.P))
+            if (Input.GetKey(KeyCode.Keypad7))
             {
 				transform.position = Vector3.MoveTowards(transform.position, player.transform.position - offset, 0.2f);
                 //detecta colisão da flor com o cientista
@@ -62,16 +61,6 @@ public  class Tiro : MonoBehaviour {
 				offset.x = 0.8f;
 			}
         }
-		/*if(canshot2)
-        {	
-            if (Input.GetKey(KeyCode.Space))
-            {
-                transform.position = Vector3.MoveTowards(transform.position, monster.transform.position, 0.2f);
-                //detecta colisão com da flor com o monstro
-                if (transform.position == monster.transform.position)
-                { GameMananger.touchable = 2; GameMananger.score2 += 50; Destroy(gameObject); }
-            }
-        }*/
     }
     IEnumerator willBeDestroyed()
     {

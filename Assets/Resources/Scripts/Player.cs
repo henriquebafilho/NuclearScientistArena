@@ -19,15 +19,10 @@ public class Player : MonoBehaviour {
 	{
         controlidleFlip = false;
         canshot = false;
-		//PlayerCheckPoint = -1;
 		rb = GetComponent<Rigidbody2D> ();
-		//Lifes = 3;
-		//SubLifes = 3;
 		DeathTime = 2f;
 		faceRight = true;
 		idle = true;
-
-		//Running = false;
 	}
 
 	public void FixedUpdate()
@@ -101,6 +96,5 @@ public class Player : MonoBehaviour {
             faceRight = !faceRight;
         }
         transform.localScale = thescale;
-
     }
 }
