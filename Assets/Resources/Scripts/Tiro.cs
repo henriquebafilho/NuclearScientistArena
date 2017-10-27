@@ -8,7 +8,7 @@ public  class Tiro : MonoBehaviour {
     public GameObject player,  monster;
     public static float forceFactor = 2000;
     public bool canshot1 = false;
-	public bool canshot2=false;
+	public bool canshot2 = false;
     public bool isGuardado = false;
 	// Use this for initialization
 	void Start () {
@@ -44,22 +44,25 @@ public  class Tiro : MonoBehaviour {
         GameMananger.touchable = 0;
     }
     // Update is called once per frame
-    void Update () {
-		if (canshot1)
+    void Update()
+    {
+        if (canshot1)
         {
-            if (Input.GetKey(KeyCode.Keypad7))
+            if (Input.GetKey(KeyCode.Keypad5))
             {
-				transform.position = Vector3.MoveTowards(transform.position, player.transform.position - offset, 0.2f);
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position - offset, 0.2f);
                 //detecta colisão da flor com o cientista
                 if (transform.position == player.transform.position)
                 { GameMananger.touchable = 1; }
             }
-			if (Input.GetAxis ("Horizontal2") > 0) {
-				offset.x = -0.8f;
-			}
-			if (Input.GetAxis ("Horizontal2") < 0) {
-				offset.x = 0.8f;
-			}
+            if (Input.GetAxis("Horizontal2") > 0)
+            {
+                offset.x = -0.8f;
+            }
+            if (Input.GetAxis("Horizontal2") < 0)
+            {
+                offset.x = 0.8f;
+            }
         }
     }
     IEnumerator willBeDestroyed()

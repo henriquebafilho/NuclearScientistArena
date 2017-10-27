@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    //static public int Lifes, SubLifes, PlayerCheckPoint;
-	//static public bool Running;
-	//public AudioClip RunSound;
+
 	public Animator Anim;
 	public  float Speed;
 	private Rigidbody2D rb;
@@ -19,7 +17,7 @@ public class Player : MonoBehaviour {
 	{
         controlidleFlip = false;
         canshot = false;
-		rb = GetComponent<Rigidbody2D> ();
+		rb = GetComponent<Rigidbody2D>();
 		DeathTime = 2f;
 		faceRight = true;
 		idle = true;
@@ -30,7 +28,7 @@ public class Player : MonoBehaviour {
         move = new Vector2(Input.GetAxis("Horizontal2"), Input.GetAxis("Vertical2"));
         rb.velocity = move*Speed;
 
-		Anim.SetFloat("Move", Mathf.Abs(move.x));
+        Anim.SetFloat("Move", Mathf.Abs(move.x));
 		Anim.SetFloat ("MoveY", move.y);
 		Anim.SetBool("Idle", idle);
 
@@ -48,30 +46,18 @@ public class Player : MonoBehaviour {
         {
             controlidleFlip = true;
         }
-        
     }
 
     void Update () 
 	{
-		CurrentDeathTime += Time.deltaTime;
-
-        /*if (walking){
-			//SoundManager.PlaySingle(RunSound);
-			//SoundManager.Instance.MakeRunClip();
-		}*/
-        
+		CurrentDeathTime += Time.deltaTime;       
     }
     //detectando área de colisão com o tiro
-    
     //---------------------------------
     void OnDisable()
 	{
 		move.x = 0;
 		Anim.SetFloat ("Move", Mathf.Abs (move.x));
-
-		/*if(Lifes == 0 && DeathTime <= CurrentDeathTime){
-			Application.LoadLevel(5);
-		}*/
 	}
 
 	private void Flip()
