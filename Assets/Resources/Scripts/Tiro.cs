@@ -48,7 +48,7 @@ public  class Tiro : MonoBehaviour {
     {
         if (canshot1)
         {
-            if (Input.GetKey(KeyCode.Keypad5))
+            if (Input.GetKey(KeyCode.P))
             {
                 transform.position = Vector3.MoveTowards(transform.position, player.transform.position - offset, 0.2f);
                 //detecta colisão da flor com o cientista
