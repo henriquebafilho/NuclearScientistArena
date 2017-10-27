@@ -45,8 +45,8 @@ public class GameMananger : MonoBehaviour {
     {
         scoreText1.text = "Score: " + score1;
         scoreText2.text = "Score: " + score2;
-        if (score1 >= 1000) { SceneManager.LoadScene("ScientistVictory"); }
-        if (score2 >= 1000) { SceneManager.LoadScene("MonsterVictory"); }
+        if (score1 >= 500) { SceneManager.LoadScene("ScientistVictory"); }
+        if (score2 >= 500) { SceneManager.LoadScene("MonsterVictory"); }
     }
     public void increaseSize()
     {
