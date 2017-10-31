@@ -25,12 +25,10 @@ public  class Tiro : MonoBehaviour {
                 player.GetComponent<Player>().canshot = false;
                 GameMananger.touchable = 1;
             }
-            if(coll.gameObject.tag == "Monstro" && 
-               Input.GetKey(KeyCode.Space))
+            if(coll.gameObject.tag == "Monstro")
             {
-                GameMananger.score2 += 50;
-                Destroy(gameObject);
-        }
+                GameMananger.touchable = 2;
+            }
             //adiciona pontos ao encostar na reserva com o cientista
             if(coll.gameObject.tag == "reserva" )
             {  
@@ -62,6 +60,14 @@ public  class Tiro : MonoBehaviour {
             if (Input.GetAxis("Horizontal2") < 0)
             {
                 offset.x = 0.8f;
+            }
+        }
+        if(canshot2)
+        {
+            if(Input.GetKey(KeyCode.Space))
+            {
+                GameMananger.score2 += 50;
+                Destroy(gameObject);
             }
         }
     }
