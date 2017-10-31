@@ -41,7 +41,6 @@ public  class Tiro : MonoBehaviour {
     {
         GameMananger.touchable = 0;
     }
-    // Update is called once per frame
     void Update()
     {
         if (canshot1)

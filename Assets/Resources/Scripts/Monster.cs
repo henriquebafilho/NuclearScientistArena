@@ -36,13 +36,13 @@ public class Monster : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (coll.gameObject.tag == "colisor") {
+		if (coll.gameObject.tag == "Flor") {
 			canshot = true;
 		} 
 	}
 	void OnTriggerExit2D(Collider2D coll)
 	{
-		if(coll.gameObject.tag == "colisor")
+		if(coll.gameObject.tag == "Flor")
 		{
 			canshot = false;
 		}
